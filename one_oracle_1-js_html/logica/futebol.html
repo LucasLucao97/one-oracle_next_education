@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebol</title>
+</head>
+<body>
+    <div class=""></div>
+    <script>
+
+        function breakLine() {
+            document.write("<br>");
+        };
+
+        function inscribe(phrase) {
+            document.write(phrase);
+            breakLine();
+        };
+
+        var win = parseInt(prompt("Quantas vitórias seu time possui? "));
+        var draw = parseInt(prompt("Quantos empates seu time possui? "));
+        var lose = parseInt(prompt("Quantas derrotas seu time possui? "));
+        var points = win * 3 + draw;
+        
+        inscribe ("Os pontos do seu time são: " + points);
+
+        if (points > 28) {
+            inscribe ("Seu time está melhor que o ano passado!");
+        }
+        if (points == 28) {
+            inscribe ("Seu time está igual ao ano passado");
+        }
+        else if (points < 28) {
+            inscribe ("Seu time está pior que o ano passado!");
+        }
+        
+    </script>
+</body>
+</html>

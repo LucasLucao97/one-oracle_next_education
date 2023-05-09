@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrelas</title>
+</head>
+<body>
+    <Script>
+        function breakLine() {
+            document.write("<br>");
+        };
+
+        function print(phrase) {
+            document.write(phrase);
+            breakLine();
+        };
+
+        for(var linha = 1; linha < 4; linha++) {
+            for(var column = 1; column <= 10; column++) {
+                document.write("*");
+            }
+            breakLine();
+        }
+    </Script>
+</body>
+</html>

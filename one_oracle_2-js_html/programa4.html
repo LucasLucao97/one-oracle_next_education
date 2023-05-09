@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa 4</title>
+</head>
+<body>
+    <canvas width="1200" height="600"></canvas>
+    <script>
+        var canvas = document.querySelector("canvas");
+        var brush = canvas.getContext("2d");
+        brush.fillStyle = "lightgray";
+        brush.fillRect(0, 0, 1200, 600);
+
+        function drawCircle(x, y, raio) {
+            brush.fillStyle = "darkred";
+            brush.beginPath();
+            brush.arc(x, y, raio, 0, 2 * Math.PI);
+            brush.fill();
+        };
+
+        function clearCanvas() {
+            brush.clearRect(0, 0, 1200, 600);
+        };
+
+        var x = 20;
+
+        function showCircle() {
+            clearCanvas();
+            drawCircle(x, 20, 10);
+            x++;
+        };
+
+        setInterval(showCircle, 10);
+    </script>
+</body>
+</html>

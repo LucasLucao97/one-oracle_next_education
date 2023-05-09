@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa 5</title>
+</head>
+<body>
+    <canvas width="1200" height="600"></canvas>
+    <script>
+        var canvas = document.querySelector('canvas');
+        var brush = canvas.getContext('2d');
+    
+        brush.fillStyle = 'lightgray';
+        brush.fillRect(0, 0, 1200, 600);
+    
+        var radius = 10;
+        var xRandom;
+        var yRandom;
+    
+        function drawCircle(x, y, radius, cor) {
+    
+            brush.fillStyle = cor;
+            brush.beginPath();
+            brush.arc(x, y, radius, 0, 2 * Math.PI);
+            brush.fill();
+    
+        };
+    
+        function clearCanvas() {
+    
+            brush.clearRect(0, 0, 1200, 600);
+    
+        };
+    
+        function drawTarget(x,y) {
+    
+            drawCircle(x, y, radius+20, 'red');
+            drawCircle(x, y, radius+10, 'white');
+            drawCircle(x, y, radius, 'red');
+    
+        };
+    
+        function sortPosition(maximo) {
+    
+            return Math.floor(Math.random() * maximo);
+    
+        };
+    
+    function refreshCanvas() {
+        clearCanvas();
+        xRandom = sortPosition(1200);
+        yRandom = sortPosition(600);
+        drawTarget(xRandom, yRandom);
+    };
+    
+    setInterval(refreshCanvas, 1000);
+    
+    function shot(event) {
+    
+        var x = event.pageX - canvas.offsetLeft;
+        var y = event.pageY - canvas.offsetTop;
+    
+        if((x > xRandom - radius)
+        && (x < xRandom + radius)
+        && (y > yRandom - radius)
+        && (y < yRandom + radius)) {
+    
+            alert("Acertou miserávi!");
+    
+        };
+    
+    
+    };
+    
+    canvas.onclick = shot;
+    
+    </script>
+</body>
+</html>

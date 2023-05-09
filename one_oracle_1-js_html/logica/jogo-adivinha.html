@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinha</title>
+</head>
+<body>
+    <script>
+
+        function breakLine() {
+            document.write("<br>");
+        };
+
+        function print(phrase) {
+            document.write(phrase);
+            breakLine();
+        };
+
+        var numberThought = Math.round(Math.random() *10);
+        var guess = parseInt(prompt("Usando apenas números de 0 à 10..." + '\n' + "Digite seu chute! "));
+
+        if (guess == numberThought){
+            print("Parabéns! Você acertou!");
+        } else {
+                print("Você errou! O número pensado foi: " + numberThought);
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhação</title>
+</head>
+<body>
+    <input/>
+    <button>Compare com meu segredo!</button>
+
+    <script>
+        function sort() {
+            return Math.round(Math.random() * 10);
+        };
+
+        function sortNumbers(quantity) {
+            var secrets = [];
+            var number = 1;
+            while (number <= quantity) {
+                var aleatoryNumber = sort();
+                if (aleatoryNumber != 0){
+                    var found = false;
+                    for (var position = 0; position < secrets.length; position++) {
+                        if (secrets[position] == aleatoryNumber) {
+                            found = true;
+                            break;
+                        }
+                    };
+
+                    if (found == false) {
+                        secrets.push(aleatoryNumber);
+                        number++;
+                    };
+                };
+            };
+            return secrets;
+        };
+
+        var secrets = sortNumbers(3);
+        console.log(secrets);
+        
+        var input = document.querySelector("input");
+        input.focus();
+
+        function verify() {
+            var found = false;
+
+            for(position = 0; position < secrets.length; position++) {
+                if (input.value == secrets[position]) {
+                    alert("Você acertou!");
+                    break;
+                };
+            };
+            if(found == false) {
+                alert("Você errou!")
+            };
+            input.value = "";
+            input.focus();
+        };
+
+        var button = document.querySelector("button");
+        button.onclick = verify;
+    </script>
+</body>
+</html>

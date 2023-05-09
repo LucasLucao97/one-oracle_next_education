@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa</title>
+</head>
+<body>
+    <canvas width="1200" height="600">
+
+    </canvas>
+    <script>
+        
+        var canvas = document.querySelector("canvas");
+        var brush = canvas.getContext("2d");
+
+        brush.fillStyle = "darkgreen";
+        brush.fillRect(0, 0, 1200, 600);
+
+        brush.fillStyle = "yellow";
+        brush.beginPath();
+        brush.moveTo(600, 100);
+        brush.lineTo(1000, 300);
+        brush.lineTo(600, 500);
+        brush.lineTo(200, 300);
+        brush.fill();
+
+        brush.fillStyle = "darkblue";
+        brush.beginPath();
+        brush.arc(600, 300, 125, 0, 2 * 3.14);
+        brush.fill();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de idades</title>
+</head>
+<body>
+    <script>
+        function breakLine() {
+            document.write("<br>");
+        };
+
+        function print(phrase) {
+            document.write(phrase);
+            breakLine();
+        };
+
+        var totalMembers = parseInt(prompt("Quantas pessoas moram com você?"));
+        var start = 1;
+        var totalAges = 0;
+        
+        while(start <= totalMembers) {
+            var age = parseInt(prompt("Informe a idade dessa pessoa:"));
+            totalAges = totalAges + age;
+            start++;
+        }
+
+        var medianOfAges = totalAges/totalMembers;
+        print("A média das idades de todos é: " + medianOfAges);
+        print("FIM!");
+
+    </script>
+</body>
+</html>

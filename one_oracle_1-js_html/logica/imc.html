@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imc</title>
+</head>
+<body>
+    <script>
+
+        function breakLine() {
+            document.write("<br>");
+        };
+
+        function inscribe(phrase) {
+            document.write(phrase);
+            breakLine();
+        };
+
+        function calculateImc(height, weight) {
+            return weight / (height*height);
+            breakLine();
+        };
+        
+        var name = prompt("Qual é o seu nome?");
+        var informedHeight = prompt(name + " qual a sua altura?");
+        var informedWeight = prompt(name + " qual seu peso?");
+        var imc = calculateImc(informedHeight, informedWeight);
+
+        inscribe('O "IMC" de '+ name + ' é: ' + imc);
+
+        if (imc < 18.5) {
+            inscribe("Você está com o peso abaixo do recomendado pela OMS.");
+        }
+        if (imc >= 18.5 && imc <= 35) {
+            inscribe("Você está com o peso dentro do recomendado pela OMS");
+        }
+        else if (imc > 35) {
+            inscribe("Você está com o peso acima do recomendado pela OMS");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos em aula</title>
+</head>
+<body>
+
+    <script>
+
+        function lineBreak()    {
+            document.write("<br>");
+        }
+        
+        function write(show)    {
+            document.write(show);
+            lineBreak();
+        }
+        
+        var ano = 2016;
+        var ageFlavio = 39;
+        var ageJoaquim = 20;
+        var ageBarney = 41;
+        var media = ((ageFlavio + ageJoaquim + ageBarney)/3);
+        
+        write("Flávio tem " + (ano - 1977) + " anos");
+        write("Joaquim tem " + (ano - 1966) + " anos ");
+
+        ano = 2017;
+        write("Barney tem " + (ano - 1977) + " anos");
+
+        write("A média das idades é " + media);
+
+    </script>
+</body>
+</html>

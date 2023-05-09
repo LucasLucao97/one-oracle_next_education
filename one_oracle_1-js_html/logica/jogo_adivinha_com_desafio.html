@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinha</title>
+</head>
+<body>
+    <script>
+        
+        function breakLine() {
+            document.write("<br>");
+        };
+
+        function print(phrase) {
+            document.write(phrase);
+            breakLine();
+        };
+
+        function sort(n) {
+            return Math.round(Math.random() * n);
+        }    
+
+        var numberThought = sort(10);
+
+        var tries = 1;
+
+        while (tries <= 3) {
+            var guess = parseInt(prompt("Bem-vindo(a) ao jogo de adivinhar." + "\n" + "Chute um número de 0 à 10. Qual você acha que é?"));
+            if(guess == numberThought) {
+                print("Uau, você acertou! Eu pensei justamente  " + numberThought);
+                break;
+            } else {
+                print("Infelizmente você errou!" + "\n" + "Chute novamente um número de 0 à 10. Qual você acha que é?");
+            };
+            tries++;
+        };
+
+        print("<br>" + "Acabou, obrigado por jogar." + "<br>" + "Para jogar novamente recarregue a página!");
+        
+    </script>
+</body>
