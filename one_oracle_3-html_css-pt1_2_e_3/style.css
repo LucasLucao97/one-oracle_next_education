@@ -1,7 +1,5 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
+body {
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -152,4 +150,21 @@ form label, form legend {
     border-color: darkblue;
     text-decoration: underline;
     transform: scale(1.1);
+}
+
+/* CSS da página index */
+
+.index-h1 {
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 1.25em 0 0.75em 0;
+}
+
+.index-h2 {
+    font-weight: bold;
+}
+
+.index-principal p {
+    margin: 0 0 1em;
 }

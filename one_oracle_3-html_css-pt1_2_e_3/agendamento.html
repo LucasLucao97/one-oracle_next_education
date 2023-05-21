@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
+    <title>Agendamento</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,37 +27,24 @@
             </nav>
         </div>
     </header>
+    
     <main>
-
-        <form>
+        <form action="">
             <label for="name">Nome completo:</label>
             <input type="text" id="name" class="stock-input" required placeholder="Nome e sobrenome">
-
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" class="stock-input" placeholder="seuemail@domino.com">
 
             <label for="telephone">Telefone/celular:</label>
             <input type="tel" id="telephone" class="stock-input" required placeholder="(XX) XXXXX-XXXX">
 
-            <label for="message">Mensagem:</label>
-            <textarea id="message" cols="70" rows="10" class="stock-input" placeholder="Digite aqui sua mensagem"></textarea>
-
             <fieldset>
-                <legend>Como prefere que entremos em contato?</legend>
-                
-                <label for="radio-email"><input type="radio" name="contact" value="E-mail" id="radio-email"> E-mail</label>
-                
-                <label for="radio-telephone"><input type="radio" name="contact" value="Telefone" id="radio-telephone"> Telefone</label>
-                
-                <label for="radio-whatsapp"><input type="radio" name="contact" value="WhatsApp" id="radio-whatsapp" checked> WhatsApp</label>
-                
+                <legend>Qual horário prefere ser atendido?</legend>
+                <label for="time">Selecione um horário entre 08:00h e 20:00h!</label>
+                <input type="time" id="time" class="time" value="08:00" min="08:00" max="20:00" required>
             </fieldset>
 
-            <label for="newsletter" class="checkbox"><input type="checkbox" checked> Gostaria de receber nossas novidades por e-mail?</label>
-
             <input type="submit" class="stock-input" id="button" value="Tudo pronto!">
-        </form>
 
+        </form>
     </main>
 
     <footer>
