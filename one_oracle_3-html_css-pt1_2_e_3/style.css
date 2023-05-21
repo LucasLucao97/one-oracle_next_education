@@ -96,3 +96,40 @@ footer {
     margin-top: 13px;
     
 }
+
+main {
+    width: 940px;
+    margin: 0 auto;
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label, form legend {
+    display: block;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.stock-input {
+    display: block;
+    margin: 0 0 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px 15px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.button {
+    display: block;
+    margin: 0 0 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px 15px;
+    width: 10%;
+}

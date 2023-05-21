@@ -9,7 +9,55 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="flag">
+            <h1>
+                <img src="imagens/logo.png" alt="Logo da Barbearia Alura">
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <main>
+
+        <form>
+            <label for="name">Nome completo:</label>
+            <input type="text" id="name" class="stock-input" required placeholder="Nome e sobrenome">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" class="stock-input" placeholder="seuemail@domino.com">
+
+            <label for="telephone">Telefone/celular:</label>
+            <input type="tel" id="telephone" class="stock-input" required placeholder="(XX) XXXXX-XXXX">
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" cols="70" rows="10" class="stock-input" placeholder="Digite aqui sua mensagem"></textarea>
+
+            <fieldset>
+                <legend>Como prefere que entremos em contato?</legend>
+                
+                <label for="radio-email"><input type="radio" name="contact" value="E-mail" id="radio-email"> E-mail</label>
+                
+                <label for="radio-telephone"><input type="radio" name="contact" value="Telefone" id="radio-telephone"> Telefone</label>
+                
+                <label for="radio-whatsapp"><input type="radio" name="contact" value="WhatsApp" id="radio-whatsapp" checked> WhatsApp</label>
+                
+                <input type="submit" class="stock-input" value="Tudo pronto!">
+            </fieldset>
+
+            <fieldset>
+                <legend>Qual horário prefere ser atendido?</legend>
+                <label for="time">Selecione um horário entre 08:00h e 20:00h!</label>
+                <input type="time" id="time" class="button" value="08:00" min="08:00" max="20:00" required>
+            </fieldset>
+
+            <label for="newsletter" class="checkbox"><input type="checkbox" checked> Gostaria de receber nossas novidades por e-mail?</label>
+        </form>
 
     </main>
 
