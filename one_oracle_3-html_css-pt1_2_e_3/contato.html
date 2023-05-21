@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
+    <title>Contato e agendamento</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,7 +18,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="produtos.html">Produtos</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="contato.html">Contato e agendamento</a></li>
                 </ul>
             </nav>
         </div>
@@ -47,16 +47,17 @@
                 
                 <label for="radio-whatsapp"><input type="radio" name="contact" value="WhatsApp" id="radio-whatsapp" checked> WhatsApp</label>
                 
-                <input type="submit" class="stock-input" value="Tudo pronto!">
             </fieldset>
 
             <fieldset>
                 <legend>Qual horário prefere ser atendido?</legend>
                 <label for="time">Selecione um horário entre 08:00h e 20:00h!</label>
-                <input type="time" id="time" class="button" value="08:00" min="08:00" max="20:00" required>
+                <input type="time" id="time" class="time" value="08:00" min="08:00" max="20:00" required>
             </fieldset>
 
             <label for="newsletter" class="checkbox"><input type="checkbox" checked> Gostaria de receber nossas novidades por e-mail?</label>
+
+            <input type="submit" class="stock-input" id="button" value="Tudo pronto!">
         </form>
 
     </main>

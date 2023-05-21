@@ -35,7 +35,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #C78C19;
+    color: #005CC8;
     text-decoration: under;
 }
 
@@ -58,11 +58,11 @@ nav a:hover {
 }
 
 .products li:hover {
-    border-color: #C78C19;
+    border-color: #005CC8;
 }
 
 .products li:active {
-    border-color: #088C19;
+    border-color: #005CC8;
 }
 
 .products li:hover h2 {
@@ -125,11 +125,31 @@ form label, form legend {
     margin: 20px 0;
 }
 
-.button {
+.time {
     display: block;
     margin: 0 0 20px;
     border: 1px solid black;
     border-radius: 4px;
     padding: 10px 15px;
     width: 10%;
+}
+
+#button {
+    display: block;
+    background-color: lightgray;
+    margin: 0 0 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 15px 10px;
+    font-size: 25px;
+    width: 40%;
+    transition: 0.25s all;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: #005CC8;
+    border-color: darkblue;
+    text-decoration: underline;
+    transform: scale(1.1);
 }
