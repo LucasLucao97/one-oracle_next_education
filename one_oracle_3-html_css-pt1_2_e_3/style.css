@@ -2,6 +2,8 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* header (all pages) */
+
 header {
     background: #BBBBBB;
     padding: 20px 0;
@@ -36,6 +38,8 @@ nav a:hover {
     color: #005CC8;
     text-decoration: under;
 }
+
+/* products page */
 
 .products {
     width: 940px;
@@ -82,23 +86,14 @@ nav a:hover {
     padding: 15px 0 0;
 }
 
-footer {
-    text-align: center;
-    background-image: url(imagens/bg.jpg);
-    padding: 40px 0px;
-}
-
-.copyright {
-    color: white;
-    font-size: 13px;
-    margin-top: 13px;
-    
-}
+/* Main (all pages) */
 
 main {
     width: 940px;
     margin: 0 auto;
 }
+
+/* "agendamento" and "contato" pages */
 
 form {
     margin: 40px 0;
@@ -106,6 +101,7 @@ form {
 
 form label, form legend {
     display: block;
+    font-weight: bold;
     font-size: 20px;
     margin: 10px 0;
 }
@@ -134,7 +130,7 @@ form label, form legend {
 
 #button {
     display: block;
-    background-color: lightgray;
+    background-color: lightgrey;
     margin: 0 0 20px;
     border: 1px solid black;
     border-radius: 4px;
@@ -152,7 +148,15 @@ form label, form legend {
     transform: scale(1.1);
 }
 
-/* CSS da página index */
+/* index page */
+
+.index-principal {
+    margin-top: 2.5%;
+    padding: 1%;
+    border: 2px solid black;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
 
 .index-h1 {
     text-align: center;
@@ -167,4 +171,80 @@ form label, form legend {
 
 .index-principal p {
     margin: 0 0 1em;
+}
+
+.map {
+    margin-top: 5%;
+    padding: 1%;
+    border: 2px solid black;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.map h1{
+    font-weight: bold;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.map p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.video {
+    margin: 5% auto;
+    padding: 1%;
+    border: 2px solid black;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.video h2{
+    font-weight: bold;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.video p{
+    text-align: right;
+}
+
+/* Footer (all pages) */
+
+footer {
+    text-align: center;
+    background-image: url(imagens/bg.jpg);
+    padding: 40px 0px;
+}
+
+.copyright {
+    color: white;
+    font-size: 13px;
+    margin-top: 13px;
+    
+}
+
+.lucas {
+    color: lightgrey;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.lucas:hover {
+    color: #005CC8;
+}
+
+@media screen and (max-width: 480px) {
+    .flag, .index-principal, .map, .video, .footer, main, .products, input{
+        width: auto;
+    }
+
+    h1, form label, form legend, input {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
 }
