@@ -4,3 +4,15 @@
     flex-wrap: wrap;
     padding: 5rem 0 0 5rem;
 }
+
+@media screen and (max-width: 768px){
+    .receitas {
+        padding: 5rem 0 0 1rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .receitas {
+        padding: 5rem 0 0 2.5rem;
+    }
+}
