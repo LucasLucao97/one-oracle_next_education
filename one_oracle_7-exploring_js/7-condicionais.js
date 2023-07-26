@@ -1,5 +1,5 @@
-console.log(`Trabalhando com condicionais`);
-const listaDeDestinos = new Array (
+console.log(`Trabalhando com condicionais\n`);
+const listaDeDestinos = new Array(
     `Salvador`,
     `São Paulo`,
     `Rio de Janeiro`
@@ -7,20 +7,22 @@ const listaDeDestinos = new Array (
 
 const idadeComprador = 15;
 const estaAcompanhada = true;
+const temPassagem =  true;
 
 console.log("Destinos possíveis:");
 console.log(listaDeDestinos);
 
-if (idadeComprador >= 18){
-    console.log("Cliente maior de idade")
-    listaDeDestinos.splice(1,1); //Removendo item hipoteticamente indisponível
+if (idadeComprador >= 18 || estaAcompanhada == true) {
+    console.log("\nVenda aprovada. Selecione o destino:");
+    listaDeDestinos.splice(1, 1); //Removendo item hipoteticamente indisponível
 } else {
-    if (estaAcompanhada){
-        console.log("Menor acompanhada de um adulto");
-        listaDeDestinos.splice(1,1);
-    } else {
-        console.log("Cliente menor de idade. Não é possível finalizar a operação");
-    };
+    console.log("\nCliente menor de idade! Não é possível finalizar a operação.");
 };
 
-console.log(listaDeDestinos);
+console.log("\nEmbarque:");
+if (idadeComprador >= 18 && temPassagem == true) {
+    console.log("Boa viagem!");
+} else {
+    console.log("Você não pode embarcar.\n");
+    console.log("*Verifique sua passagem e as condições para a viagem.*");
+}
