@@ -27,3 +27,15 @@ while (contador < 3) {
 };
 
 console.log("Destino existe? ", destinoExiste);
+
+if (podeComprar && destinoExiste){
+    console.log("Boa viagem")
+} else {
+    console.log("Operação não realizada.\nVerifique sua passagem e as condições para a viagem.")
+}
+
+//for (let i = 0; i < 3; i++) {
+//    if (listaDeDestinos[i] == destino) {
+//        destinoExiste = false;
+//    }
+//};
